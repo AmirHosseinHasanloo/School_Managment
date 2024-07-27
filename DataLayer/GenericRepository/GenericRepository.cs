@@ -20,7 +20,7 @@ namespace DataLayer.GenericRepository
             _dbSet = _context.Set<TEntity>();
         }
 
-        public virtual IEnumerable<TEntity> Get(Expression<Func<TEntity, bool>> where = null)
+        public virtual IEnumerable<TEntity> GetAll(Expression<Func<TEntity, bool>> where = null)
         {
             IQueryable<TEntity> query = _dbSet;
 

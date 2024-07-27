@@ -151,7 +151,12 @@ namespace School_Managment
 
         private void btnShowLates_Click(object sender, EventArgs e)
         {
+            ShowLatesForm frmlate = new ShowLatesForm();
 
+            //get user id for editing
+            int studentId = int.Parse(StudentGridView.CurrentRow.Cells[0].Value.ToString());
+            frmlate.studentId = studentId;
+            frmlate.ShowDialog();
         }
     }
 }
